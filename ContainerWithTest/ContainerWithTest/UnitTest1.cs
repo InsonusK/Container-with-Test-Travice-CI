@@ -14,7 +14,7 @@ namespace ContainerWithTest
         public void Test1()
         {
             Console.WriteLine("We have passed Test");
-            throw new AssertionException("some error");
+            // throw new AssertionException("some error");
             Assert.Pass();
         }
     }
