@@ -3,10 +3,10 @@ service:
   - docker
 
 befor_install:
-  - docker build -t insonusk/container-with-test-Travice-CI -f ./Dockerfile .
+  - docker build -t insonusk/container-with-test-travice-ci -f ./Dockerfile .
 
 script:
-  - docker run insonusk/container-with-test-Travice-CI dotnet test
+  - docker run insonusk/container-with-test-travice-ci dotnet test
 
 deploy:
   provider: script
