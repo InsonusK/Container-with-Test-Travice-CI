@@ -3,13 +3,13 @@ service:
   - docker
 
 befor_install:
-  - docker build -t insonusk/container-with-test -f ./Dockerfile .
+  - docker build -t insonusk/container-with-test-Travice-CI -f ./Dockerfile .
 
 script:
-  - docker run insonusk/container-with-test dotnet test
+  - docker run insonusk/container-with-test-Travice-CI dotnet test
 
 deploy:
   provider: script
-  script: bash Scripts/docker-build-release-push.sh
+  script: echo 'Deploy new version'
   on: 
     branch: master
